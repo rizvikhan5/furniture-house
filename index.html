@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture House</title>
+
+    <!-- DaisyUi CDN start -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUi CDN end -->
+
+     <!-- google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+     <style>
+         .font-robot{     
+                         font-family: "Roboto", sans-serif;
+                        
+                         }
+     </style>
+
+</head>
+
+<body class="font-robot">
+  <header class="container mx-auto">
+         <!-- naveber start -->
+          <section class="">
+                <div class="navbar bg-base-100 justify-between">
+                  <div class="navbar-start">
+                    <div class="dropdown">
+                      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                      </div>
+                      <ul
+                        tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li class="text-lg"><a href="#home">Home</a></li>
+                        <li class="text-lg"><a href="#shops">Shops</a></li>
+                        <li class="text-lg"><a href="#blog">Blog</a></li>
+                        <li class="text-lg"><a href="#products">Products</a></li>
+                        
+                        <li class="text-lg"><a href="#pages">Pages</a></li>
+                        
+                      </ul>
+                    </div>
+                    <a class="btn btn-ghost text-2xl">Furniture House</a>
+                  </div>
+                  <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                      <li class="text-lg"><a href="#home">Home</a></li>
+                      <li class="text-lg"><a href="#shops">Shops</a></li>
+                      <li class="text-lg"><a href="#blog">Blog</a></li>
+
+                      <li class="text-lg"><a href="#products">Products</a></li>
+                      <li class="text-lg"><a href="#pages">Pages</a></li>
+                    </ul>
+                  </div>
+                  <label class="swap swap-rotate">
+                    <!-- this hidden checkbox controls the state -->
+                    <input type="checkbox" class="theme-controller " value="dim" />
+                  
+                    <!-- sun icon -->
+                    <svg
+                      class="swap-off h-10 w-10 fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24">
+                      <path
+                        d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                    </svg>
+                  
+                    <!-- moon icon -->
+                    <svg
+                      class="swap-on h-10 w-10 fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24">
+                      <path
+                        d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                    </svg>
+                  </label>
+                </div>
+          </section>
+
+          <!-- carusol -->
+
+        <section id="home" class="mt-10">
+          <!-- card-1 -->
+              <div class="carousel w-full">
+                <div id="item1" class="carousel-item w-full">
+
+
+                  <div
+                        class="hero h-96 "
+                        style="background-image: url(image/s1.jpg);">
+                        <div class="hero-overlay bg-opacity-20"></div>
+
+                        <div class="hero-content text-black  sm:-ms-60 md:-ms-60 lg:-ms-[420px] text-left">
+                          <div class="max-w-md my-2">
+                            
+                            <p class="text-lg">
+                              UP TO 15% OFF
+                            </p>
+                            <h4 class="text-3xl font-semibold">Better Interiors</h4>
+                            <p class="text-lg">Packed in a facility that handles tree nuts and sesame seeds</p>
+                            <a class="btn bg-black border-black text-white" target="_blank" href="">Shop Now</a>
+                          </div>
+                        </div>
+                  </div>
+
+
+                </div>
+
+                <!-- card 2 -->
+                <div id="item2" class="carousel-item w-full">
+
+
+                  <div
+                        class="hero h-96"
+                        style="background-image: url(image/s2.jpg);">
+                        <div class="hero-overlay bg-opacity-20"></div>
+                        
+                        <div class="hero-content text-black  sm:-me-60 md:-me-96 lg:-me-[420px] text-left">
+                          <div class="max-w-md my-2">
+                            
+                            <p class="text-lg">
+                              UP TO 15% OFF
+                            </p>
+                            <h4 class="text-3xl font-semibold">Better Interiors</h4>
+                            <p class="text-lg">Packed in a facility that handles tree nuts and sesame seeds</p>
+                            <a class="btn bg-black border-black text-white" target="_blank" href="">Shop Now</a>
+
+                          </div>
+                        </div>
+              </div>
+              </div>
+            </div>
+          <div class="flex w-full justify-center gap-2 py-2">
+            <a href="#item1" class="btn btn-xs">.</a>
+            <a href="#item2" class="btn btn-xs">.</a>
+          </div>  
+        </section>
+  </header>
+
+  <main class="container mx-auto">
+
+    <!-- 3-card section -->
+      <section class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- card-1 -->
+        <div class=" bg-slate-100">
+          <figure>
+            <img
+              src="image/ba28.jpg"
+              alt="Shoes" />
+          </figure>
+          <div class="card-body text-center">
+            <a class="btn bg-white border-white w-60 ms-12" href="">Wooden Chair</a>
+            
+          </div>
+        </div>
+        <!-- card-2 -->
+        <div class=" bg-slate-100">
+          <figure>
+            <img
+              src="image/ba31.jpg"
+              alt="Shoes" />
+          </figure>
+          <div class="card-body text-center">
+            <a class="btn bg-white border-white w-60 ms-12" href="">Side Table</a>
+            
+          </div>
+        </div>
+        <!-- card-3 -->
+        <div class=" bg-slate-100">
+          <figure>
+            <img
+              src="image/ba30.jpg"
+              alt="Shoes" />
+          </figure>
+          <div class="card-body text-center">
+            <a class="btn bg-white border-white w-60 ms-12" href="">Lamp</a>
+            
+          </div>
+        </div>
+
+
+
+
+
+
+      </section>
+
+
+      <!-- feature section -->
+      <section id="shops" class="mt-16">
+        <h4 class="text-3xl font-semibold text-center">FEATURED</h4>
+
+       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3  mt-16">
+        <!-- card-1 -->
+            <div class=" bg-slate-100">
+              <figure>
+                <img
+                  src="image/low tool.jpg"
+                  alt="Shoes" />
+              </figure>
+              <div class="card-body text-center">
+                <h2 class="font-bold text-xl">Low Oak Stool</h2>
+                <p class="text-lg font-semibold text-orange-300">$30.00</p>
+                
+              </div>
+            </div>
+
+            <!-- card-2 -->
+
+            <div class="bg-slate-100">
+              <figure>
+                <img
+                  src="image/19.1.jpg"
+                  alt="Shoes" />
+              </figure>
+              <div class="card-body text-center">
+                <h2 class="font-bold text-xl">Granade</h2>
+                <p class="text-lg font-semibold text-orange-300">$40.00</p>
+                
+              </div>
+            </div>
+            <!-- card-3 -->
+
+            <div class="bg-slate-100">
+              <figure>
+                <img
+                  src="image/chair.jpg"
+                  alt="Shoes" />
+              </figure>
+              <div class="card-body text-center">
+                <h2 class="font-bold text-xl">Rainbow Chair</h2>
+                <p class="text-lg font-semibold text-orange-300">$60.00</p>
+                
+              </div>
+            </div>
+            <!-- card-4 -->
+            <div class="bg-slate-100">
+            <figure>
+              <img
+                src="image/drawer.jpg"
+                alt="Shoes" />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="font-bold text-xl">Wooden Storage</h2>
+              <p class="text-lg font-semibold text-orange-300">$65.00</p>
+              
+            </div>
+          </div>
+       </div>
+
+        
+
+
+      </section>
+
+
+      <!-- sofa & bedlamp section -->
+      <section id="blog" class="mt-16 mb-10">
+        <div class="flex flex-col lg:flex-row gap-2">
+
+
+                  <div
+                        class="hero h-96 "
+                        style="background-image: url(image/ba34.jpg);">
+                        <div class="hero-overlay bg-opacity-10"></div>
+                        <div class="hero-content text-neutral-content text-center">
+                          <div class="max-w-md">
+                            <h1 class="mb-5 text-5xl text-white font-bold">RECLINING SOFA</h1>
+                            <p class="mb-5 text-white text-lg">
+                            Durable yard-dyed cushions.
+                            </p>
+                            
+                          </div>
+                        </div>
+                  </div>
+
+                   <div
+                        class="hero h-96 "
+                        style="background-image: url(image/ba35.jpg);">
+                        <div class="hero-overlay bg-opacity-10"></div>
+                        <div class="hero-content text-neutral-content text-center">
+                          <div class="max-w-md">
+                            <h1 class="mb-5 text-5xl text-white font-bold">BADROOM LAMP</h1>
+                            <p class="mb-5 text-white text-lg">
+                              Durable yard-dyed cushions.
+                            </p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+        </section>
+
+        <!-- LTB section -->
+        <section id="products" class="mt-16 mb-16">
+
+          <div class="flex gap-10 justify-center">
+             <h4 class="text-xl font-semibold">LATEST PRODUCT</h4>
+             <h4 class="text-xl font-semibold">TOP RATING</h4>
+             <h4 class="text-xl font-semibold">BEST SELLING</h4>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3  mt-10">
+            <!-- card-1 -->
+            <div class="bg-slate-100">
+              <figure>
+                <img
+                  src="image/drawer.jpg"
+                  alt="Shoes" />
+              </figure>
+              <div class="card-body text-center">
+                <h2 class="font-bold text-xl">Wooden Storage</h2>
+                <p class="text-lg font-semibold text-orange-300">$65.00</p>
+                
+              </div>
+            </div>
+    
+                <!-- card-2 -->
+    
+                <div class="bg-slate-100">
+                  <figure>
+                    <img
+                      src="image/19.1.jpg"
+                      alt="Shoes" />
+                  </figure>
+                  <div class="card-body text-center">
+                    <h2 class="font-bold text-xl">Granade</h2>
+                    <p class="text-lg font-semibold text-orange-300">$40.00</p>
+                    
+                  </div>
+                </div>
+                <!-- card-3 -->
+    
+                <div class="bg-slate-100">
+                  <figure>
+                    <img
+                      src="image/chair.jpg"
+                      alt="Shoes" />
+                  </figure>
+                  <div class="card-body text-center">
+                    <h2 class="font-bold text-xl">Rainbow Chair</h2>
+                    <p class="text-lg font-semibold text-orange-300">$60.00</p>
+                    
+                  </div>
+                </div>
+                <!-- card-4 -->
+                <div class="bg-slate-100">
+                <figure>
+                  <img
+                    src="image/carusol 1.jpg"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body text-center">
+                  <h2 class="font-bold text-xl">Pendant Lamp</h2>
+                  <p class="text-lg font-semibold text-orange-300">$65.00</p>
+                  
+                </div>
+              </div>
+              <!-- card-5 -->
+              <div class="bg-slate-100">
+                <figure>
+                  <img
+                    src="image/low tool 2.jpg"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body text-center">
+                  <h2 class="font-bold text-xl">Low Stool 2</h2>
+                  <p class="text-lg font-semibold text-orange-300">$30.00</p>
+                  
+                </div>
+              </div>
+              <!-- card-6 -->
+              <div class="bg-slate-100">
+                <figure>
+                  <img
+                    src="image/sofa.jpg"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body text-center">
+                  <h2 class="font-bold text-xl">Sofa</h2>
+                  <p class="text-lg font-semibold text-orange-300">$80.00</p>
+                  
+                </div>
+              </div>
+              <!-- card-7 -->
+              <div class="bg-slate-100">
+                <figure>
+                  <img
+                    src="image/19.2.jpg"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body text-center">
+                  <h2 class="font-bold text-xl">Granade 2</h2>
+                  <p class="text-lg font-semibold text-orange-300">$45.00</p>
+                  
+                </div>
+              </div>
+              <!-- card-8 -->
+              <div class="bg-slate-100">
+                <figure>
+                  <img
+                    src="image/chair 2.jpg"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body text-center">
+                  <h2 class="font-bold text-xl">Chair 2s</h2>
+                  <p class="text-lg font-semibold text-orange-300">$45.00/p>
+                  
+                </div>
+              </div>
+           </div>
+        </section>
+
+        <section id="pages" class="mt-16 mb-16">
+
+
+        <div
+          class="hero h-[600px]"
+          style="background-image: url(image/ba47.jpg);">
+          <div class="hero-overlay bg-opacity-5"></div>
+          
+          <div class="hero-content text-neutral-content mt-20  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 text-center">
+            <!-- Card1 -->
+            <div class="card bg-base-100 h-60 shadow-xl ">
+              <div class="card-body text-black text-left">
+
+                <div class="rating">
+                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-500" />
+                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-500"  />
+                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-500" />
+                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-500" checked="checked" />
+                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-500" />
+                </div>
+                <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum facere provident officiis corporis.</p>
+                <div class="avatar">
+                  <div class="w-24 rounded-full">
+                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- card2 -->
+
+            <div class="card bg-base-100 h-60 shadow-xl">
+              <div class="card-body text-black text-left">
+
+                <div class="rating">
+                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-500" />
+                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-500"  />
+                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-500" />
+                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-500" checked="checked" />
+                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-500" />
+                </div>
+                <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum facere provident officiis corporis.</p>
+                <div class="avatar">
+                  <div class="w-24 rounded-full">
+                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card3 -->
+            <!-- <div class="card bg-base-100 h-60  shadow-xl">
+              <div class="card-body text-black text-left">
+
+                <div class="rating">
+                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-500" />
+                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-500"  />
+                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-500" />
+                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-500" checked="checked" />
+                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-amber-500" />
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum facere provident officiis corporis.</p>
+                <div class="avatar">
+                  <div class="w-24 rounded-full">
+                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            
+
+
+
+
+          </div>
+        </div>
+      </section>
+
+  </main>
+
+
+
+  <footer class="footer bg-base-200 text-base-content p-10">
+    <nav>
+      <h6 class="footer-title">Services</h6>
+      <a class="link link-hover">Branding</a>
+      <a class="link link-hover">Design</a>
+      <a class="link link-hover">Marketing</a>
+      <a class="link link-hover">Advertisement</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Company</h6>
+      <a class="link link-hover">About us</a>
+      <a class="link link-hover">Contact</a>
+      <a class="link link-hover">Jobs</a>
+      <a class="link link-hover">Press kit</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Legal</h6>
+      <a class="link link-hover">Terms of use</a>
+      <a class="link link-hover">Privacy policy</a>
+      <a class="link link-hover">Cookie policy</a>
+    </nav>
+    <form>
+      <h6 class="footer-title">Newsletter</h6>
+      <fieldset class="form-control w-80">
+        <label class="label">
+          <span class="label-text">Enter your email address</span>
+        </label>
+        <div class="join">
+          <input
+            type="text"
+            placeholder="username@site.com"
+            class="input input-bordered join-item" />
+          <button class="btn btn-primary join-item">Subscribe</button>
+        </div>
+      </fieldset>
+    </form>
+  </footer>
+
+ 
+</body>
+</html>
